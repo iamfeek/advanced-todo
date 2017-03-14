@@ -1,10 +1,12 @@
 import firebase from 'firebase'
 
-const config = {
-  apiKey: "AIzaSyDHL6JFTyBcaV60WpE4yXfeO0aZbzA9Xbk",
-  authDomain: "practice-auth.firebaseapp.com",
-  databaseURL: "https://practice-auth.firebaseio.com",
-}
+var config = {
+    apiKey: "AIzaSyA2JGUGsUPeRZLBwPyopwgPAQ9JtkfJcwc",
+    authDomain: "react-router-cc823.firebaseapp.com",
+    databaseURL: "https://react-router-cc823.firebaseio.com",
+    storageBucket: "react-router-cc823.appspot.com",
+    messagingSenderId: "243145510094"
+  };
 
 firebase.initializeApp(config)
 

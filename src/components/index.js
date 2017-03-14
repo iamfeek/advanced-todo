@@ -5,6 +5,7 @@ import Login from './Login'
 import Register from './Register'
 import Home from './Home'
 import Dashboard from './protected/Dashboard'
+import NotFound from './NotFound'
 import { logout } from '../helpers/auth'
 import { firebaseAuth } from '../config/constants'
 
@@ -59,7 +60,7 @@ export default class App extends Component {
           <nav className="navbar navbar-default navbar-static-top">
             <div className="container">
               <div className="navbar-header">
-                <Link to="/" className="navbar-brand">React Router + Firebase Auth</Link>
+                <Link to="/" className="navbar-brand">Advanced Todo</Link>
               </div>
               <ul className="nav navbar-nav pull-right">
                 <li>
@@ -92,7 +93,7 @@ export default class App extends Component {
                 <PublicRoute authed={this.state.authed} path='/login' component={Login} />
                 <PublicRoute authed={this.state.authed} path='/register' component={Register} />
                 <PrivateRoute authed={this.state.authed} path='/dashboard' component={Dashboard} />
-                <Route render={() => <h3>No Match</h3>} />
+                <Route render={() => <NotFound />} />
               </Switch>
             </div>
           </div>

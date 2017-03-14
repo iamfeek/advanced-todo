@@ -8,7 +8,14 @@ function setErrorMsg(error) {
 }
 
 export default class Login extends Component {
-  state = { loginMessage: null }
+  constructor(props){
+    super(props);
+
+    this.state = {
+      loginMessage: null
+    }
+  }
+
   handleSubmit = (e) => {
     e.preventDefault()
     login(this.email.value, this.pw.value)
@@ -23,7 +30,7 @@ export default class Login extends Component {
   }
   render () {
     return (
-      <div className="col-sm-6 col-sm-offset-3">
+      <div className="col-sm-4 col-sm-offset-4">
         <h1> Login </h1>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
